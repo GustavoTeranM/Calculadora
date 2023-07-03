@@ -134,3 +134,22 @@ function myFunction_set(val) {
 }
 
 
+function convertToCelsius() {
+  var celsiusInput = document.getElementById("celsius-input");
+  var fahrenheitResult = document.getElementById("fahrenheit-result");
+
+  var celsius = parseFloat(celsiusInput.value);
+  var fahrenheit = (celsius * 9/5) + 32;
+
+  fahrenheitResult.value = fahrenheit;
+}
+
+function convertToFahrenheit() {
+  var celsiusInput = document.getElementById("celsius-input");
+  var fahrenheitResult = document.getElementById("fahrenheit-result");
+
+  var fahrenheit = parseFloat(fahrenheitResult.value);
+  var celsius = (fahrenheit - 32) * 5/9;
+
+  celsiusInput.value = celsius;
+}

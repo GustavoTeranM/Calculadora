@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Longitud</title>
+</head>
+<body>
+  <h1>Calculadora de Longitud</h1>
+
+  <label for="metros-input">Metros:</label>
+  <input type="number" id="metros-input" />
+
+  <label for="centimetros-result">Centímetros:</label>
+  <input type="text" id="centimetros-result" readonly />
+
+  <button onclick="convertToCentimetros()">Convertir a Centímetros</button>
+
+  <script>
+    function convertToCentimetros() {
+      var metrosInput = document.getElementById("metros-input");
+      var centimetrosResult = document.getElementById("centimetros-result");
+
+      var metros = parseFloat(metrosInput.value);
+      var centimetros = metros * 100;
+
+      centimetrosResult.value = centimetros.toFixed(2);
+    }
+  </script>
+</body>
+</html>

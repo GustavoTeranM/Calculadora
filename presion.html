@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Presion</title>
+</head>
+<body>
+  <h1>Calculadora de Presion</h1>
+
+  <label for="pascal-input">Pascal:</label>
+  <input type="number" id="pascal-input" />
+
+  <label for="bar-result">Bar:</label>
+  <input type="text" id="bar-result" readonly />
+
+  <button onclick="convertToBar()">Convertir a Bar</button>
+
+  <script>
+    function convertToBar() {
+      var pascalInput = document.getElementById("pascal-input");
+      var barResult = document.getElementById("bar-result");
+
+      var pascal = parseFloat(pascalInput.value);
+      var bar = pascal * 0.00001;
+
+      barResult.value = bar.toFixed(2);
+    }
+  </script>
+</body>
+</html>
