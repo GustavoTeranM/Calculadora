@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Masa</title>
+</head>
+<body>
+  <h1>Calculadora de Masa</h1>
+
+  <label for="kilos-input">Kilos:</label>
+  <input type="number" id="kilos-input" />
+
+  <label for="gramos-result">Gramos:</label>
+  <input type="text" id="gramos-result" readonly />
+
+  <button onclick="convertToGramos()">Convertir a Gramos</button>
+
+  <script>
+    function convertToGramos() {
+      var kilosInput = document.getElementById("kilos-input");
+      var gramosResult = document.getElementById("gramos-result");
+
+      var kilos = parseFloat(kilosInput.value);
+      var gramos = kilos * 1000;
+
+      gramosResult.value = gramos.toFixed(2);
+    }
+  </script>
+</body>
+</html>
